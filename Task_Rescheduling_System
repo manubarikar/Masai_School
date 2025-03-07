@@ -1,0 +1,15 @@
+let tasks = ["Buy groceries", "Finish report", "Call plumber", "Schedule meeting", "Pay bills"];
+for (let i = 0; i < tasks.length - 1; i++) {
+    tasks[i] = tasks[i + 1];
+}
+tasks.length -= 1;
+let newTasks = ["Complete urgent emails", "Prepare presentation"];
+tasks.length += newTasks.length;
+for (let i = tasks.length - 1; i >= newTasks.length; i--) {
+    tasks[i] = tasks[i - newTasks.length];
+}
+for (let i = 0; i < newTasks.length; i++) {
+    tasks[i] = newTasks[i];
+}
+tasks[tasks.length - 1] = "Review project plan";
+console.log(tasks);
