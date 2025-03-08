@@ -1,0 +1,11 @@
+function printSumOfIndexes(N, M) {
+    for (let i = 0; i < N; i++) {
+        let row = "";
+        for (let j = 0; j < M; j++) {
+            row += (i + j) + " "; // Calculate sum of indexes and add to row
+        }
+        console.log(row.trim()); // Print the row after trimming extra space
+    }
+}
+let N = 4, M = 3;
+printSumOfIndexes(N, M);
