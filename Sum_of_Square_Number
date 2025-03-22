@@ -1,0 +1,12 @@
+function sumOfSquares(k) {
+    for (let a = 0; a * a <= k; a++) {
+        for (let b = 0; b * b <= k; b++) {
+            if (a * a + b * b === k) {
+                return true
+            }
+        }
+    }
+    return false
+}
+console.log(sumOfSquares(25))
+console.log(sumOfSquares(7))
