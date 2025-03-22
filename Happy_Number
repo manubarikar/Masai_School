@@ -1,0 +1,17 @@
+function isHappy(n) {
+    let seen = {};
+    while (n !== 1 && !seen[n]) {
+        seen[n] = true;
+        let sum = 0;
+        let num = n;
+        while (num > 0) {
+            let digit = num % 10; 
+            sum += digit * digit; 
+            num = Math.floor(num / 10); 
+        }
+        n = sum;
+    }
+    return n === 1;
+}
+console.log(isHappy(19));
+console.log(isHappy(20));
